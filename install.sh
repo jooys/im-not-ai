@@ -109,5 +109,5 @@ echo ""
 echo "완료 (mode=$MODE)."
 echo "  Claude: 새 세션에서 /humanize-korean (또는 /humanize)"
 echo "  Codex : \$humanize-korean"
-[ "$MODE" = symlink ] && echo "  업데이트: 저장소에서 git pull 하면 심링크라 자동 반영."
+echo "  업데이트: ./update.sh (새 버전 자동 감지 + 적용) · 제거: ./uninstall.sh"
 exit 0

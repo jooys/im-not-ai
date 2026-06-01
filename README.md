@@ -31,6 +31,7 @@ cd im-not-ai
 
 - Claude: `/humanize-korean` · Codex: `$humanize-korean`
 - 한쪽만: `./install.sh --claude-only` / `--codex-only` · 제거: `./uninstall.sh`
+- **업데이트**: `./update.sh` — 새 버전 자동 감지 후 `git pull` + 재설치(`--check`는 감지만). 마켓플레이스 설치는 `/plugin update`.
 - Codex는 **Fast(단일 호출) 모드만** 제공합니다. 정밀 strict 5인 파이프라인은 Claude Code 전용.
 
 ## 왜 한글 특화인가

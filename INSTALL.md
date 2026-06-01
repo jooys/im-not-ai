@@ -76,11 +76,24 @@ cd im-not-ai
 
 ---
 
-## 업데이트 · 제거
+## 업데이트
 
-- **업데이트(스크립트 설치)**: 심링크라 저장소에서 `git pull`만 하면 됩니다(`--copy` 설치는 `./install.sh --copy` 재실행).
-- **제거(스크립트 설치)**: `./uninstall.sh` — 이 저장소를 가리키는 심링크만 제거하고, 직접 둔 파일·`.bak.*` 백업은 보존합니다.
-- **제거(마켓플레이스)**: `/plugin uninstall humanize-korean`.
+- **자동 감지 + 적용 (스크립트 설치, 권장)** — `./update.sh`
+  - upstream(git)에 새 버전이 있으면 자동으로 `git pull` + `install.sh` 재적용(신규 스킬/에이전트/구조 변경까지 연결).
+  - `./update.sh --check` — 감지만(적용 안 함). 최신이면 종료코드 `0`, 업데이트 있으면 `10`.
+  - `--copy`로 설치했다면 `./update.sh --copy --force`.
+- **수동** — `git pull`만 해도 심링크라 내용은 반영됩니다(신규 파일 연결은 `./install.sh` 한 번 더).
+- **마켓플레이스 설치** — Claude Code가 갱신을 관리합니다: `/plugin marketplace update im-not-ai` → `/plugin update humanize-korean`.
+- **주기적 무인 업데이트 (opt-in)** — 완전 자동 갱신을 원하면 cron/launchd로 `update.sh`를 거세요. 예(매주 월 09:00, 감지 시 적용):
+  ```cron
+  0 9 * * 1  cd /path/to/im-not-ai && ./update.sh >> ~/.humanize-update.log 2>&1
+  ```
+  알림만 원하면 `./update.sh --check`를 사용하세요. ⚠️ 자동 적용은 upstream 코드를 자동으로 받아 연결하므로 **신뢰하는 저장소에만** 거세요.
+
+## 제거
+
+- **스크립트 설치** — `./uninstall.sh`: 이 저장소를 가리키는 심링크만 제거(직접 둔 파일·`.bak.*`·`--copy` 설치본은 보존).
+- **마켓플레이스** — `/plugin uninstall humanize-korean`.
 
 ---
 
