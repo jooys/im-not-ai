@@ -102,9 +102,43 @@ korean-humanize-editor
 - 원문에 없는 주장·예시 추가
 - 사용 목적이 탐지기 우회 또는 AI 사용 은폐로 명시됨
 
-## 다음 작업
+## 현재 운영 상태 — post-merge
 
-1. 이 branch의 CI green 확인
-2. Hermes `muzel` profile-local skill wrapper 초안 생성
-3. redacted fixture 기반 QA gate 작성
-4. 사용자 승인 후 `muzel`에만 pilot 적용
+```text
+PR: https://github.com/jooys/im-not-ai/pull/1
+merge commit: 9b17094a1a414b50794b27c56a44deaa7def28ef
+post-merge CI: https://github.com/jooys/im-not-ai/actions/runs/27837848451
+status: success
+canonical branch: main
+```
+
+적용 완료 profile:
+
+```text
+muzel
+fallback/default
+muzrin
+muzriel
+muzria
+muzback
+```
+
+검증 완료:
+
+```text
+Python compile PASS
+unittest 57 tests OK
+shell syntax PASS
+version_check_ok version=2.1.0
+Korean humanize pilot gate Contract PASS 13/13
+profile smoke PASS 5/5
+post-merge CI success
+```
+
+## 다음 운영 원칙
+
+1. 내부 기준 소스는 이제 `jooys/im-not-ai` `main`이다.
+2. 전역 `install.sh`/`update.sh`는 계속 실행하지 않는다.
+3. Hermes profile-local `korean-humanize-editor` wrapper만 사용한다.
+4. 자동 후처리는 켜지 않는다. 명시 요청 또는 적합한 문서 편집 상황에서만 사용한다.
+5. drift가 발견되면 fixture/profile smoke를 추가하고 skill guard를 보강한다.
