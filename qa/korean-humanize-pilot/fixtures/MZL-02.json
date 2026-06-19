@@ -1,0 +1,42 @@
+{
+  "id": "MZL-02",
+  "type": "muzel_human_review_sample",
+  "expected_status": "PASS",
+  "max_change_rate": 80,
+  "requires_summary": true,
+  "input": "`epoko77-ai/im-not-ai`는 그대로 전역 설치하지 않고, 내부 fork `jooys/im-not-ai`의 `internal/humanize-korean-pilot` branch로 정리한 뒤 Hermes profile-local `korean-humanize-editor` skill을 통해 단계 적용한다. 목적은 AI 탐지기 우회가 아니라 한국어 문체 품질 개선, 번역투 제거, 사용자-facing 보고/카피 가독성 개선이다.\n\n무즈린이 `epoko77-ai/im-not-ai`를 분석한 결과, 이 repo는 한국어 AI 문체 taxonomy, quick-rules, metric layer, Fast/Strict 구조는 유용하지만 main branch의 버전·문서·테스트·marketplace 정합성이 깨져 있었다. 사용자는 이를 우리 시스템에 적용할 수 있는지 검토한 뒤, 적용 플랜을 구체화하고 적용을 시작하라고 지시했다.\n\n운영 원칙은 전역 설치 금지, 품질 개선 포지셔닝, 입력 데이터 경계, 의미 보존 우선, 단계적 rollout이다. `install.sh`나 `update.sh`를 실행해 `~/.claude`, `~/.codex`, Gemini 전역 extension에 symlink를 만들지 않는다.\n",
+  "must_preserve": {
+    "exact_strings": [
+      "epoko77-ai/im-not-ai",
+      "jooys/im-not-ai",
+      "internal/humanize-korean-pilot",
+      "Hermes",
+      "korean-humanize-editor",
+      "무즈린",
+      "taxonomy",
+      "quick-rules",
+      "metric layer",
+      "Fast/Strict",
+      "main branch",
+      "marketplace",
+      "install.sh",
+      "update.sh",
+      "~/.claude",
+      "~/.codex",
+      "Gemini 전역 extension"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "API key",
+    "Bearer [A-Za-z0-9]",
+    "ghp_[A-Za-z0-9]",
+    "xoxb-[A-Za-z0-9]",
+    "탐지기 우회 목적 지원"
+  ],
+  "required_output_patterns": [
+    "STATUS: PASS",
+    "전역 설치하지 않는다",
+    "단계 적용"
+  ]
+}

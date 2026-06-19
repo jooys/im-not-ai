@@ -1,20 +1,27 @@
 {
   "name": "im-not-ai",
   "owner": {
-    "name": "epoko77-ai"
+    "name": "jooys"
   },
   "metadata": {
-    "description": "AI가 쓴 한글 텍스트를 사람이 쓴 글처럼 윤문하는 humanize-korean 스킬 마켓플레이스",
-    "version": "1.5.0",
+    "description": "한국어 AI식 문체·번역투를 줄이는 내부 품질 개선용 humanize-korean 스킬 마켓플레이스",
+    "version": "2.1.0",
     "pluginRoot": "."
   },
   "plugins": [
     {
       "name": "humanize-korean",
       "source": "./",
-      "description": "AI가 쓴 한글 텍스트를 사람이 쓴 글처럼 윤문하는 오케스트레이터 스킬 + 서브에이전트 묶음 (Fast + strict).",
-      "version": "1.5.0",
-      "keywords": ["korean", "humanize", "ai-detector", "윤문", "번역투"]
+      "description": "한국어 문체·번역투·AI식 표현을 점검하고 의미 보존 원칙으로 윤문하는 내부 품질 개선용 스킬 + 서브에이전트 묶음 (Fast + strict).",
+      "version": "2.1.0",
+      "keywords": [
+        "korean",
+        "humanize",
+        "윤문",
+        "번역투",
+        "korean-style",
+        "quality-gate"
+      ]
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "id": "RES-02",
+  "type": "research",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "SkillOpt candidate-002는 validation 94.67, test 93.33을 기록했다. 이러한 결과를 통해 muzrin 리서치 스킬에 있어서 task-type router와 adoption evidence matrix가 효과적이라는 점을 시사한다.",
+  "must_preserve": {
+    "exact_strings": [
+      "SkillOpt",
+      "candidate-002",
+      "validation 94.67",
+      "test 93.33",
+      "muzrin",
+      "task-type router",
+      "adoption evidence matrix"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "항상 성공",
+    "100% 보장"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "근거"
+  ]
+}

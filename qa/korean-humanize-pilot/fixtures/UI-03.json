@@ -1,0 +1,25 @@
+{
+  "id": "UI-03",
+  "type": "policy_copy",
+  "expected_status": "HOLD",
+  "max_change_rate": 30,
+  "requires_summary": true,
+  "input": "개인정보 처리방침 제3조: “서비스 제공을 위해 필요한 최소한의 개인정보를 30일 동안 보관합니다.” 이 문장은 정책 문구에 있어서 의미 변경 없이 유지되어야 한다.",
+  "must_preserve": {
+    "exact_strings": [
+      "개인정보 처리방침 제3조",
+      "30일"
+    ],
+    "direct_quotes": [
+      "“서비스 제공을 위해 필요한 최소한의 개인정보를 30일 동안 보관합니다.”"
+    ]
+  },
+  "forbidden_output_patterns": [
+    "영구 보관",
+    "즉시 삭제"
+  ],
+  "required_output_patterns": [
+    "HOLD",
+    "정책 문구"
+  ]
+}

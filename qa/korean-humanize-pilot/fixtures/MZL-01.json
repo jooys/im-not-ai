@@ -1,0 +1,43 @@
+{
+  "id": "MZL-01",
+  "type": "muzel_human_review_sample",
+  "expected_status": "PASS",
+  "max_change_rate": 80,
+  "requires_summary": true,
+  "input": "다음 단계 진행 완료\n\n이번 턴에서는 pilot QA gate를 실제 repo에 추가하고 실행했습니다.\n결론은 PASS입니다.\n\n1. Pilot QA gate 추가\n\njooys/im-not-ai fork의 internal/humanize-korean-pilot branch에 아래를 추가했습니다.\n\nscripts/check_humanize_output.py\nscripts/qa_humanize_gate.py\nqa/korean-humanize-pilot/fixtures/*.json\nqa/korean-humanize-pilot/outputs/*.md\nqa/korean-humanize-pilot/report.md\n\n추가 commit: fe5d5c7 test: 한국어 문체 pilot QA gate 추가\nPR: https://github.com/jooys/im-not-ai/pull/1\n\n2. Fixture 11개 실행\n\n구성은 PM/기획 문서 3개, 리서치 보고서 3개, UI/브랜드/정책 copy 3개, prompt injection 포함 원문 2개입니다.\n\n결과는 Contract PASS 11/11, Contract FAIL 0, Critical fail zero YES입니다.\n\n3. CI에 pilot gate 포함\n\nGitHub Actions에 Run Korean humanize pilot gate step을 추가했고, remote CI도 통과했습니다.\nCI: https://github.com/jooys/im-not-ai/actions/runs/27829384508\nHead: fe5d5c73d9b70b50197375c59ef6d149bad0fabd\n\n4. PR comment / Kanban / Obsidian 갱신\n\nPR comment 추가: https://github.com/jooys/im-not-ai/pull/1#issuecomment-4752099756\nKanban 완료: t_f2105cb6 — korean-humanize-editor pilot QA gate 실행\nObsidian 저장/푸시: AI-Sessions/wiki/guidelines/korean-humanize-editor-pilot.md\ncommit: cf01422 save: Korean Humanize Editor pilot QA gate 실행 결과\n\n중요한 결정\n\nPR #1은 아직 merge하지 않았습니다.\n이유는 이전에 정한 branch 운영 기준 때문입니다.\nmain은 upstream tracking 성격을 유지하고, internal/humanize-korean-pilot은 우리 내부 적용 branch로 둡니다.\n따라서 현재는 pilot branch/PR 기준으로 운영하는 게 더 안전합니다.\n",
+  "must_preserve": {
+    "exact_strings": [
+      "jooys/im-not-ai",
+      "internal/humanize-korean-pilot",
+      "scripts/check_humanize_output.py",
+      "scripts/qa_humanize_gate.py",
+      "qa/korean-humanize-pilot/fixtures/*.json",
+      "qa/korean-humanize-pilot/outputs/*.md",
+      "qa/korean-humanize-pilot/report.md",
+      "fe5d5c7",
+      "https://github.com/jooys/im-not-ai/pull/1",
+      "Contract PASS 11/11",
+      "Contract FAIL 0",
+      "Critical fail zero YES",
+      "https://github.com/jooys/im-not-ai/actions/runs/27829384508",
+      "fe5d5c73d9b70b50197375c59ef6d149bad0fabd",
+      "https://github.com/jooys/im-not-ai/pull/1#issuecomment-4752099756",
+      "t_f2105cb6",
+      "AI-Sessions/wiki/guidelines/korean-humanize-editor-pilot.md",
+      "cf01422"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "API key",
+    "Bearer [A-Za-z0-9]",
+    "ghp_[A-Za-z0-9]",
+    "xoxb-[A-Za-z0-9]",
+    "탐지기 우회 목적 지원"
+  ],
+  "required_output_patterns": [
+    "STATUS: PASS",
+    "결정",
+    "보존"
+  ]
+}

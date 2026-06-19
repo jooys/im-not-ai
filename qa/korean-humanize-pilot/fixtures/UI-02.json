@@ -1,0 +1,23 @@
+{
+  "id": "UI-02",
+  "type": "ui_copy",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "READ-ONLY · NO WRITE ACTION 상태에 있어서 사용자는 아직 데이터를 수정할 수 없다. Moa Admin · Action Lens 화면을 통해 현재 차단된 작업과 다음 행동을 확인할 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "READ-ONLY · NO WRITE ACTION",
+      "Moa Admin · Action Lens"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "WRITE ACTION 가능",
+    "저장 버튼"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "안전 토큰 보존"
+  ]
+}

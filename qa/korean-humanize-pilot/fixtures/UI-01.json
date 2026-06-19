@@ -1,0 +1,26 @@
+{
+  "id": "UI-01",
+  "type": "brand_copy",
+  "expected_status": "HOLD",
+  "max_change_rate": 30,
+  "requires_summary": true,
+  "input": "히어로 문구: “Moa, 관계를 더 가깝게”. CTA: “지금 시작하기”. 이 문구는 브랜드 캠페인에 있어서 가장 중요한 첫인상을 만들 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "히어로 문구",
+      "CTA"
+    ],
+    "direct_quotes": [
+      "“Moa, 관계를 더 가깝게”",
+      "“지금 시작하기”"
+    ]
+  },
+  "forbidden_output_patterns": [
+    "더 감성적으로",
+    "완전히 새롭게"
+  ],
+  "required_output_patterns": [
+    "HOLD",
+    "브랜드 핵심 문구"
+  ]
+}
