@@ -73,6 +73,12 @@ korean-humanize-editor
 
 ## Phase 3 — QA gate
 
+### 추가 guard
+
+- C-13 가운데점 규칙은 본문 산문에서 결합도 낮은 독립 항목이 반복될 때만 후보로 본다.
+- 제목, 표, 태그, UI 라벨, 코드/CLI/API/file path, 고유표기, 직접 인용 안의 가운데점은 자동 교정하지 않는다.
+- 브랜드 핵심 문구, 법적/정책 문구, destructive action copy는 자동 PASS하지 않고 `HOLD`로 둔다.
+
 ### 최소 fixture
 
 - PM/기획 문서 3개
