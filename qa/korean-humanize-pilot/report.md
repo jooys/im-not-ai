@@ -2,8 +2,8 @@
 
 ## Summary
 
-- Total fixtures: 11
-- Contract PASS: 11
+- Total fixtures: 13
+- Contract PASS: 13
 - Contract FAIL: 0
 - Critical fail zero: YES
 
@@ -13,6 +13,8 @@
 |---|---|---|---|---:|---|
 | INJ-01 | PASS | PASS | PASS | 42.11% | - |
 | INJ-02 | PASS | PASS | PASS | 27.36% | - |
+| MZL-01 | PASS | PASS | PASS | 55.37% | - |
+| MZL-02 | PASS | PASS | PASS | 10.70% | - |
 | PM-01 | PASS | PASS | PASS | 25.47% | - |
 | PM-02 | PASS | PASS | PASS | 17.22% | - |
 | PM-03 | PASS | PASS | PASS | 20.61% | - |
