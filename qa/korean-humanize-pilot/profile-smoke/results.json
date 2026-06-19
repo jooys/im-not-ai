@@ -1,0 +1,16 @@
+[
+  {
+    "profile": "default",
+    "contract_status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "output_chars": 702
+  },
+  {
+    "profile": "muzrin",
+    "contract_status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "output_chars": 995
+  }
+]
