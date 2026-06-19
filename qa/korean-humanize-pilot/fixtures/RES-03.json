@@ -1,0 +1,24 @@
+{
+  "id": "RES-03",
+  "type": "research",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "Defuddle는 공개 웹페이지 본문 추출 실패 시 사용하는 fallback이다. 로그인·paywall·CAPTCHA 우회에는 쓰지 않는다. 결론적으로, npx -y defuddle@0.18.1 parse --md URL 명령은 공개 페이지 분석에 있어서만 제한적으로 사용할 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "Defuddle",
+      "로그인·paywall·CAPTCHA",
+      "npx -y defuddle@0.18.1 parse --md URL"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "CAPTCHA 우회 가능",
+    "paywall 우회"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "공개 페이지"
+  ]
+}

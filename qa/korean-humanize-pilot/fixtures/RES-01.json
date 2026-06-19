@@ -1,0 +1,25 @@
+{
+  "id": "RES-01",
+  "type": "research",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "Park et al. 2024에 따르면 C-11 연결어미 뒤 쉼표는 KatFish 기준 4.84배 분리도를 가진다. 이를 통해 한국어 AI 문체를 정량적으로 설명할 수 있으며, 결론적으로 문체 품질 게이트에 있어서 중요한 근거가 된다.",
+  "must_preserve": {
+    "exact_strings": [
+      "Park et al. 2024",
+      "C-11",
+      "KatFish",
+      "4.84배"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "검증 완료된 탐지기 우회",
+    "undetectable"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "정량"
+  ]
+}

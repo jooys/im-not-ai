@@ -1,0 +1,26 @@
+{
+  "id": "PM-03",
+  "type": "pm_planning",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "Moa Android 배포는 com.jooys.moa 1.0.0.3 (1000005) 버전에 있어서 Medium_Phone AVD를 통해 검증할 수 있다. 결론적으로, Firebase App Distribution smoke가 통과했으므로 Play internal 접근권 이슈는 별도 후속으로 관리할 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "com.jooys.moa",
+      "1.0.0.3 (1000005)",
+      "Medium_Phone",
+      "Firebase App Distribution",
+      "Play internal"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "production deploy complete",
+    "사용자 계정 삭제"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "후속"
+  ]
+}

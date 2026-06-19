@@ -30,3 +30,6 @@ jobs:
 
       - name: Check manifest/version/safety contracts
         run: python scripts/version_check.py
+
+      - name: Run Korean humanize pilot gate
+        run: python scripts/qa_humanize_gate.py --fixtures qa/korean-humanize-pilot/fixtures --outputs qa/korean-humanize-pilot/outputs --report qa/korean-humanize-pilot/report.md

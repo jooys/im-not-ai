@@ -1,0 +1,26 @@
+{
+  "id": "PM-02",
+  "type": "pm_planning",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "자비스 대시보드는 127.0.0.1:8787 환경에 있어서 GET /api/dashboard/summary 응답을 바탕으로 운영 현황을 보여줄 수 있다. 또한 t_d39e1361 결과를 통해 Kanban·Obsidian·cron·profile 상태를 하나의 화면에서 확인할 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "127.0.0.1:8787",
+      "GET /api/dashboard/summary",
+      "t_d39e1361",
+      "Kanban·Obsidian·cron·profile"
+    ],
+    "direct_quotes": []
+  },
+  "forbidden_output_patterns": [
+    "POST /api",
+    "DELETE /api",
+    "token"
+  ],
+  "required_output_patterns": [
+    "PASS",
+    "READ-ONLY|read-only"
+  ]
+}

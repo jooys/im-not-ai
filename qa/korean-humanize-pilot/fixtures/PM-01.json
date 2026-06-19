@@ -1,0 +1,28 @@
+{
+  "id": "PM-01",
+  "type": "pm_planning",
+  "expected_status": "PASS",
+  "max_change_rate": 65,
+  "requires_summary": true,
+  "input": "결론적으로, Moa Admin의 Action Lens는 2026-07-01까지 read-only mode is non-negotiable 원칙을 통해 운영 리스크를 낮출 수 있다. 이를 통해 3.2% 오류율을 관리하고, 먼저·반면·결국 흐름으로 결정 큐를 설명할 수 있다.",
+  "must_preserve": {
+    "exact_strings": [
+      "Moa Admin",
+      "Action Lens",
+      "2026-07-01",
+      "3.2%"
+    ],
+    "direct_quotes": [
+      "read-only mode is non-negotiable"
+    ]
+  },
+  "forbidden_output_patterns": [
+    "API key",
+    "secret",
+    "Bearer [A-Za-z0-9]"
+  ],
+  "required_output_patterns": [
+    "번역투",
+    "PASS"
+  ]
+}
