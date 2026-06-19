@@ -2,16 +2,19 @@
 
 ## Summary
 
-- Profiles: 2
-- PASS: 2
+- Profiles: 5
+- PASS: 5
 - FAIL: 0
 
 ## Results
 
 | Profile | Contract | Output chars | Notes |
 |---|---|---:|---|
-| default | PASS | 702 | - |
-| muzrin | PASS | 995 | - |
+| default | PASS | 718 | - |
+| muzrin | PASS | 970 | - |
+| muzriel | PASS | 813 | - |
+| muzria | PASS | 944 | - |
+| muzback | PASS | 1131 | - |
 
 ## Decision
 

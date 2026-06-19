@@ -4,13 +4,34 @@
     "contract_status": "PASS",
     "errors": [],
     "warnings": [],
-    "output_chars": 702
+    "output_chars": 718
   },
   {
     "profile": "muzrin",
     "contract_status": "PASS",
     "errors": [],
     "warnings": [],
-    "output_chars": 995
+    "output_chars": 970
+  },
+  {
+    "profile": "muzriel",
+    "contract_status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "output_chars": 813
+  },
+  {
+    "profile": "muzria",
+    "contract_status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "output_chars": 944
+  },
+  {
+    "profile": "muzback",
+    "contract_status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "output_chars": 1131
   }
 ]
