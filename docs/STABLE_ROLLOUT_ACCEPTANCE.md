@@ -13,7 +13,7 @@ accepted by: 주윤식
 repo: jooys/im-not-ai
 canonical branch: main
 stable tag: internal-humanize-stable-2026-06-20
-profile skill: korean-humanize-editor v0.1.7
+profile skill: korean-humanize-editor v0.1.8
 ```
 
 The original one-week observation window is no longer required for this rollout because the user reviewed the first day of operation and approved promotion to stable internal use.
@@ -68,4 +68,4 @@ critical fail: 0
 - This is not an AI-detector bypass workflow.
 - This does not authorize automatic rewriting of every message.
 - This does not authorize upstream/global installer execution.
-- This does not delete the old pilot branch; branch cleanup remains a separate repository maintenance action.
+- The old pilot branch `internal/humanize-korean-pilot` was deleted after verifying it was fully contained in `main`.

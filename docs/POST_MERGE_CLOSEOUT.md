@@ -40,7 +40,7 @@ qa/korean-humanize-pilot/profile-smoke/manual-review.md   PASS with profile-spec
 Enabled profile-local skill:
 
 ```text
-korean-humanize-editor v0.1.7
+korean-humanize-editor v0.1.8
 profiles: muzel, default, muzrin, muzriel, muzria, muzback
 status: accepted stable internal rollout
 stable tag: internal-humanize-stable-2026-06-20

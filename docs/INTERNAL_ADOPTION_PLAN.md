@@ -111,7 +111,8 @@ post-merge CI: https://github.com/jooys/im-not-ai/actions/runs/27837848451
 status: accepted stable internal rollout
 canonical branch: main
 stable tag: internal-humanize-stable-2026-06-20
-profile skill: korean-humanize-editor v0.1.7
+branch cleanup: internal/humanize-korean-pilot deleted after containment check
+profile skill: korean-humanize-editor v0.1.8
 ```
 
 적용 완료 profile:
