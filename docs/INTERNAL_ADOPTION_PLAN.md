@@ -102,14 +102,16 @@ korean-humanize-editor
 - 원문에 없는 주장·예시 추가
 - 사용 목적이 탐지기 우회 또는 AI 사용 은폐로 명시됨
 
-## 현재 운영 상태 — post-merge
+## 현재 운영 상태 — accepted stable rollout
 
 ```text
 PR: https://github.com/jooys/im-not-ai/pull/1
 merge commit: 9b17094a1a414b50794b27c56a44deaa7def28ef
 post-merge CI: https://github.com/jooys/im-not-ai/actions/runs/27837848451
-status: success
+status: accepted stable internal rollout
 canonical branch: main
+stable tag: internal-humanize-stable-2026-06-20
+profile skill: korean-humanize-editor v0.1.7
 ```
 
 적용 완료 profile:
@@ -141,4 +143,5 @@ post-merge CI success
 2. 전역 `install.sh`/`update.sh`는 계속 실행하지 않는다.
 3. Hermes profile-local `korean-humanize-editor` wrapper만 사용한다.
 4. 자동 후처리는 켜지 않는다. 명시 요청 또는 적합한 문서 편집 상황에서만 사용한다.
-5. drift가 발견되면 fixture/profile smoke를 추가하고 skill guard를 보강한다.
+5. 1일 실사용 관찰에서 critical drift가 없어 사용자 결정으로 stable rollout을 수용했다. 기존 1주 관찰 대기는 종료한다.
+6. drift가 발견되면 fixture/profile smoke를 추가하고 skill guard를 보강한다.

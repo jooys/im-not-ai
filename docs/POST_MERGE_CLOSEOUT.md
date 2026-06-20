@@ -2,7 +2,7 @@
 
 ## Summary
 
-Internal pilot PR #1 was merged into `main` after deterministic QA, profile-local rollout, real Hermes profile smoke, and post-merge CI verification.
+Internal pilot PR #1 was merged into `main` after deterministic QA, profile-local rollout, real Hermes profile smoke, and post-merge CI verification. After one day of real use without critical drift, the rollout was accepted as stable internal operation.
 
 ## Merge
 
@@ -40,8 +40,10 @@ qa/korean-humanize-pilot/profile-smoke/manual-review.md   PASS with profile-spec
 Enabled profile-local skill:
 
 ```text
-korean-humanize-editor v0.1.4
+korean-humanize-editor v0.1.7
 profiles: muzel, default, muzrin, muzriel, muzria, muzback
+status: accepted stable internal rollout
+stable tag: internal-humanize-stable-2026-06-20
 ```
 
 The rollout remains profile-local. The upstream/global installers are not used.
@@ -59,9 +61,11 @@ automatic post-processing: OFF
 - `muzria`: preserve QA verdicts, expected/actual, evidence paths, reproduction semantics.
 - `muzback`: preserve production/deploy/destructive/credential/admin/session/billing approval boundaries.
 
-## Next operations
+## Accepted operation
 
 1. Treat `main` as the canonical internal fork branch.
 2. Keep `epoko77-ai/im-not-ai` as upstream reference only.
 3. Add fixture/profile smoke cases whenever a profile-specific drift is found.
 4. Do not enable automatic rewriting without a separate explicit rollout decision.
+5. Do not run global `install.sh`/`update.sh` for Hermes profiles.
+6. The former one-week observation window is closed early by user decision after one day of acceptable operation.
